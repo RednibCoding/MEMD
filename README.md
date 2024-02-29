@@ -88,7 +88,7 @@ project:
 
 ```c
 #define USE_MEMD // Activate memd (must be first)
-#define MEMD_IMPLEMENTATION // Also include implementation, when it is imported the first time (must be second)
+#define MEMD_IMPLEMENTATION // Also include implementation if it is imported the first time (must be second)
 #include "memd.h" // include memd.h (must be last)
 
 #include <string.h>
