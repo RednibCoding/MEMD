@@ -1,4 +1,4 @@
-# MEMD: (Mem)ory Leak (D)etecktion Library
+# MEMD: (Mem)ory Leak (D)etection Library
 
 MEMD is a drop-in, single-header library designed for easy integration into C
 projects to facilitate memory leak detection. By defining `MEMD_IMPLEMENTATION`
