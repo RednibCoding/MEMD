@@ -138,7 +138,7 @@ MEMD Leak Summary:
      Memory leak at main.c:8: (200 bytes)
 
    Warnings:
-    - main.c:17: Double free detected
+     main.c:17: Double free detected
 
 ----------------------------------
 ```

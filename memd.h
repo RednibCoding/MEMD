@@ -273,7 +273,7 @@ char* memd_report() {
     if (MEMD_Data.warning_count > 0) {
         APPEND_TO_REPORT("\n   Warnings:\n");
         for (int i = 0; i < MEMD_Data.warning_count; i++) {
-            APPEND_TO_REPORT("    - %s:%d: %s\n", 
+            APPEND_TO_REPORT("     %s:%d: %s\n", 
                 MEMD_Data.warnings[i].file,
                 MEMD_Data.warnings[i].line,
                 MEMD_Data.warnings[i].message);
