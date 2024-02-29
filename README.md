@@ -28,7 +28,12 @@ potential leaks, call `memd_report` before your application exits:
 ```c
 int main() {
     // Your code here
-    memd_report(); // Print the memory leak report
+    // Get the MEMD report
+    char* report = memd_report();
+    if (report) {
+        printf("%s", report); // Use the report.
+        memd_report_free(report); // Free the report when done.
+    }
     return 0;
 }
 ```
