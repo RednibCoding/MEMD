@@ -9,13 +9,13 @@ REM Define compiler
 set COMPILER=gcc
 
 REM Output file name
-set OUTPUT_FILE_NAME=main.exe
+set OUTPUT_FILE_NAME=example.exe
 
 REM Define resource files to include
 set RES_FILES=
 
 REM Define the source files to include
-set SRC_FILES=main.c
+set SRC_FILES=example.c
 
 REM Debug build
 @REM  %COMPILER% %SRC_FILES% %RES_FILES% -o test.exe -std=c99 -lopengl32 -lgdi32

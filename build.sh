@@ -9,13 +9,13 @@ echo "Starting compilation..."
 COMPILER=gcc
 
 # Output file name
-OUTPUT_FILE_NAME=main
+OUTPUT_FILE_NAME=example
 
 # Define resource files to include
 RES_FILES=
 
 # Define the source files to include
-SRC_FILES=main.c
+SRC_FILES=example.c
 
 # Debug build
 # Uncomment the following line for debug build
