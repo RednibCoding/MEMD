@@ -15,9 +15,9 @@ trackable.
 #include "memd.h"
 ```
 
-If `USE_MEMD` is not defined, calls to `memd_report`, `memd_pause`, `memd_resume` and `memd_report_free` will be
-replaced by empty macros, eliminating the need to remove these calls manually
-from your code.
+If `USE_MEMD` is not defined, calls to `memd_report`, `memd_pause`,
+`memd_resume` and `memd_report_free` will be replaced by empty macros,
+eliminating the need to remove these calls manually from your code.
 
 ## Usage
 
@@ -40,9 +40,10 @@ int main() {
 
 ### Ignoring Memory Operations
 
-Use memd_pause and memd_resume to temporarily disable and subsequently resume tracking for specific memory operations.
-This is particularly useful for handling memory allocated or freed
-by external libraries, which MEMD cannot track directly.
+Use `memd_pause` and `memd_resume` to temporarily disable and subsequently
+resume tracking for specific memory operations. This is particularly useful for
+handling memory allocated or freed by external libraries, which MEMD cannot
+track directly.
 
 ```c
 memd_pause(); // Ignore the following memory operation(s)
