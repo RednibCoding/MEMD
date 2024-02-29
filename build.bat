@@ -1,12 +1,12 @@
+@echo off
+
 REM Simple build script template for small projects
 REM No need for 'make' and stuff
-
-@echo off
 
 echo Starting compilation...
 
 REM Define compiler
-set COMPILER=gcc
+set COMPILER=zig cc
 
 REM Output file name
 set OUTPUT_FILE_NAME=example.exe
@@ -18,7 +18,7 @@ REM Define the source files to include
 set SRC_FILES=example.c
 
 REM Debug build
-@REM  %COMPILER% %SRC_FILES% %RES_FILES% -o test.exe -std=c99 -lopengl32 -lgdi32
+@REM  %COMPILER% %SRC_FILES% %RES_FILES% -o %OUTPUT_FILE_NAME% -std=c99 -lopengl32 -lgdi32
 
 REM Release build
 %COMPILER% %SRC_FILES% %RES_FILES% -o %OUTPUT_FILE_NAME% -std=c99 -s -lopengl32 -lgdi32 -O3 -march=native -funroll-loops -flto -fomit-frame-pointer
