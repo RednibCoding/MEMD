@@ -40,8 +40,8 @@ int main() {
 
 ### Ignoring Memory Operations
 
-Use `memd_pause` to temporarily disable tracking for specific memory
-operations. This is particularly useful for handling memory allocated or freed
+Use memd_pause and memd_resume to temporarily disable and subsequently resume tracking for specific memory operations.
+This is particularly useful for handling memory allocated or freed
 by external libraries, which MEMD cannot track directly.
 
 ```c
