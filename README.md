@@ -40,14 +40,14 @@ int main() {
 
 ### Ignoring Memory Operations
 
-Use `memd_ignore` to temporarily disable tracking for specific memory
+Use `memd_pause` to temporarily disable tracking for specific memory
 operations. This is particularly useful for handling memory allocated or freed
 by external libraries, which MEMD cannot track directly.
 
 ```c
-memd_ignore(1); // Ignore the following memory operation(s)
+memd_pause(); // Ignore the following memory operation(s)
 free(external_ptr); // Free operation by an external library, not to be tracked
-memd_ignore(0); // Resume tracking memory operations
+memd_resume(); // Resume tracking memory operations
 ```
 
 This feature ensures that MEMD's tracking does not interfere with or falsely
