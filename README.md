@@ -15,7 +15,7 @@ trackable.
 #include "memd.h"
 ```
 
-If `USE_MEMD` is not defined, calls to `memd_report` and `memd_pause`, `memd_resume` and `memd_report_free` will be
+If `USE_MEMD` is not defined, calls to `memd_report`, `memd_pause`, `memd_resume` and `memd_report_free` will be
 replaced by empty macros, eliminating the need to remove these calls manually
 from your code.
 
