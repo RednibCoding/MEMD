@@ -308,8 +308,8 @@ char* memd_report() {
 /** 
  * Defines no-operation versions of MEMD functions when MEMD is disabled.
  */
-#define memd_report() ((void)0)
-#define memd_report_free(char* ptr) ((void)0)
+#define memd_report() ((void*)0)
+#define memd_report_free(char) ((void)0)
 #define memd_pause() ((void)0)
 #define memd_resume() ((void)0)
 
