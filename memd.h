@@ -4,7 +4,6 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include <stdio.h>
-#include <stdbool.h>
 
 /** 
  * Define USE_MEMD before including this file to enable MEMD functionality.
@@ -80,15 +79,9 @@ void memd_report_free(char* ptr);
 #ifdef MEMD_IMPLEMENTATION
 
 /** 
- * Thread-local flag to ignore memory tracking for specific operations.
+ * Flag to ignore memory tracking for specific operations.
  */
-#if defined(_MSC_VER)
-__declspec(thread) int _memd_ignore = 0;
-#elif defined(__STDC_VERSION__) && __STDC_VERSION__ >= 201112L
-_Thread_local int _memd_ignore = 0;
-#else
-__thread int _memd_ignore = 0;
-#endif
+int _memd_ignore = 0;
 
 /** 
  * Finds a tracked memory allocation by its address.
